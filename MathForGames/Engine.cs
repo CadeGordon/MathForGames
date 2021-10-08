@@ -9,6 +9,7 @@ namespace MathForGames
         private static bool _applicationShouldClose = false;
         private static int _currentSeneIndex;
         private Scene[] _scenes = new Scene[0];
+        private Actor _actor;
 
 
         /// <summary>
