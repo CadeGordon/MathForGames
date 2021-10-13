@@ -28,7 +28,7 @@ namespace MathForGames
             {
                 Update();
                 Draw();
-                Thread.Sleep(150);
+                Thread.Sleep(1);
             }
 
             //Call end for entire application
@@ -43,7 +43,7 @@ namespace MathForGames
             Scene scene = new Scene();
             Actor actor = new Actor('P', new MathLibrary.Vector2 { x = 0, y = 0 }, "Actor1", ConsoleColor.DarkMagenta);
             Actor actor2 = new Actor('A', new MathLibrary.Vector2 { x = 10, y = 10 }, "Actor2", ConsoleColor.DarkCyan);
-            Player player = new Player('@', 5, 5, 1, "Player", ConsoleColor.Magenta);
+            Player player = new Player('@', 5, 5, 10, "Player", ConsoleColor.Magenta);
 
             scene.AddActor(actor);
             scene.AddActor(actor2);
@@ -62,6 +62,9 @@ namespace MathForGames
         private void Update()
         {
             _scenes[_currentSeneIndex].Update();
+
+            while (Console.KeyAvailable)
+                Console.ReadKey(true);
         }
 
         /// <summary>
@@ -162,6 +165,14 @@ namespace MathForGames
             //set the buffer at the index of the given position to be the icon
             _buffer[(int)position.x, (int)position.y] = icon;
             return true;
+        }
+
+        /// <summary>
+        /// Ends the application
+        /// </summary>
+        public static void CloseApplication()
+        {
+            _applicationShouldClose = true;
         }
     }
 }
