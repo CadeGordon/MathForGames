@@ -37,6 +37,11 @@ namespace MathForGames
         { 
         
         }
+
+        public Icon Icon
+        {
+            get { return _icon; }
+        }
         
 
         public Actor(char icon, Vector2 position, string name = "Actor", ConsoleColor color = ConsoleColor.White)
@@ -59,6 +64,7 @@ namespace MathForGames
         public virtual void Draw()
         {
             Engine.Render(_icon, Postion);
+
         }
 
         public void End()

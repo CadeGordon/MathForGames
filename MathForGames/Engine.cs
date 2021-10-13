@@ -35,18 +35,77 @@ namespace MathForGames
             End();
         }
 
+
+        
+
+
+
+
+
         /// <summary>
         /// Calls when the application starts
         /// </summary>
         private void Start()
         {
-            Scene scene = new Scene();
-            Actor actor = new Actor('P', new MathLibrary.Vector2 { x = 0, y = 0 }, "Actor1", ConsoleColor.DarkMagenta);
-            Actor actor2 = new Actor('A', new MathLibrary.Vector2 { x = 10, y = 10 }, "Actor2", ConsoleColor.DarkCyan);
-            Player player = new Player('@', 5, 5, 10, "Player", ConsoleColor.Magenta);
 
-            scene.AddActor(actor);
-            scene.AddActor(actor2);
+            Scene scene = new Scene();
+
+            //top wall
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 0, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //bottom wall
+            for (int i = 2; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 28, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //left side wall
+            for (int i = 1; i < 130; i++)
+            {
+                Actor wall = new Actor('|', 2, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //right side wall
+            for (int i = 1; i < 110; i++)
+            {
+                Actor wall = new Actor('|', 118, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall one
+            for (int i = 3; i < 10; i++)
+            {
+                Actor wall = new Actor('_', i, 3, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall two
+            for (int i = 1; i < 29; i++)
+            {
+                Actor wall = new Actor('|', 10, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+
+
+
+
+
+            Player player = new Player('@', 4, 1, 1, "Player", ConsoleColor.Magenta);
+
+
             scene.AddActor(player);
 
             _currentSeneIndex = AddScene(scene);

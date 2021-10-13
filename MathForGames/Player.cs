@@ -42,7 +42,15 @@ namespace MathForGames
                 moveDirection = new Vector2 { y = -1 };
             if (keyPressed == ConsoleKey.S)
                 moveDirection = new Vector2 { y = 1 };
-            
+            if (keyPressed == ConsoleKey.UpArrow)
+                moveDirection = new Vector2 { y = -3 };
+            if (keyPressed == ConsoleKey.LeftArrow)
+                moveDirection = new Vector2 { x = -3 };
+            if (keyPressed == ConsoleKey.DownArrow)
+                moveDirection = new Vector2 { y = 3 };
+            if (keyPressed == ConsoleKey.RightArrow)
+                moveDirection = new Vector2 { x = 3 };
+
 
             Velocity = moveDirection * Speed;
 
