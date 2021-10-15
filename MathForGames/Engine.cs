@@ -146,6 +146,8 @@ namespace MathForGames
 
             }
 
+            
+
             //sub wall vertical one
             for (int i = 1; i < 29; i++)
             {
@@ -244,10 +246,61 @@ namespace MathForGames
             }
 
 
+            //death barrier left side
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('_', 1, i, "wall", ConsoleColor.Black);
+                scene.AddActor(wall);
 
+            }
 
+            //death barrier bottom
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 30, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
 
+            }
 
+            //death barrier top
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, -1, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //death barrier top 2.0
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, -2, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //death barrier right side
+            for (int i = 1; i < 110; i++)
+            {
+                Actor wall = new Actor('_', 119, i, "wall", ConsoleColor.Black);
+                scene.AddActor(wall);
+
+            }
+
+            //death box one
+            for (int i = 29; i < 37; i++)
+            {
+                Actor wall = new Actor('|', i, 2, "wall", ConsoleColor.Black);
+                scene.AddActor(wall);
+
+            }
+
+            //death box one
+            for (int i = 50; i < 37; i++)
+            {
+                Actor wall = new Actor('|', i, 2, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
 
 
 
