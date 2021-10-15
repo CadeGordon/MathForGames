@@ -82,21 +82,171 @@ namespace MathForGames
 
             }
 
-            //sub wall one
-            for (int i = 3; i < 10; i++)
+            //sub wall horizontal one
+            for (int i = 3; i < 118; i++)
             {
                 Actor wall = new Actor('_', i, 3, "wall", ConsoleColor.White);
                 scene.AddActor(wall);
 
             }
 
-            //sub wall two
+            //sub wall horizontal two
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 6, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall horizontal three
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 9, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall horizontal four
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 12, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall horizontal five
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 15, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall horizontal six
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 18, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall horizontal seven
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 21, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall horizontal eight
+            for (int i = 3; i < 118; i++)
+            {
+                Actor wall = new Actor('_', i, 24, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical one
             for (int i = 1; i < 29; i++)
             {
                 Actor wall = new Actor('|', 10, i, "wall", ConsoleColor.White);
                 scene.AddActor(wall);
 
             }
+
+
+            //sub wall veritcal two
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 19, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical three
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 28, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical four
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 37, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical five
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 46, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical six
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 55, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical seven
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 64, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical eight
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 73, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical nine
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 82, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical ten
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 91, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical eleven
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 100, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+            //sub wall vertical twelve
+            for (int i = 1; i < 118; i++)
+            {
+                Actor wall = new Actor('|', 109, i, "wall", ConsoleColor.White);
+                scene.AddActor(wall);
+
+            }
+
+
+
+
+
 
 
 
