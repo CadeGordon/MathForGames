@@ -5,10 +5,50 @@ namespace MathLibrary
 {
     public struct Vector2
     {
-        public float x;
-        public float y;
+        public float X;
+        public float Y;
 
 
+        public Vector2(float x, float y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        /// <summary>
+        /// Gets the length of the vector 
+        /// </summary>
+        public float Magnitude
+        {
+            get
+            {
+                return (float)Math.Sqrt(X * X + Y * Y);
+            }
+        }
+
+        /// <summary>
+        /// Gets the normalized version of this vector without changing it
+        /// </summary>
+        public Vector2 Normalized
+        {
+            get
+            {
+                Vector2 value = this;
+                return value.Normalize();
+            }
+        }
+
+        /// <summary>
+        /// Changes this vector to have a magnitude that is equal to one
+        /// </summary>
+        /// <returns>The result of the normalzition. Returns an epmty vevtor if the magnitude is zero</returns>
+        public Vector2 Normalize()
+        {
+            if (Magnitude == 0)
+                return new Vector2();
+
+            return this / Magnitude;
+        }
 
         /// <summary>
         /// Adds the x value of the second vector to the first, and adds the y value of the second vector to the first
@@ -18,7 +58,7 @@ namespace MathLibrary
         /// <returns>The resuly of the vector addition</returns>
         public static Vector2 operator +(Vector2 lhs, Vector2 rhs)
         {
-            return new Vector2 { x = lhs.x + rhs.x, y = lhs.y + rhs.y };
+            return new Vector2 { X = lhs.X + rhs.X, Y = lhs.Y + rhs.Y };
         }
 
         /// <summary>
@@ -29,7 +69,7 @@ namespace MathLibrary
         /// <returns>The resuly of the vector subtraction</returns>
         public static Vector2 operator -(Vector2 lhs, Vector2 rhs)
         {
-            return new Vector2 { x = lhs.x - rhs.x, y = lhs.y - rhs.y };
+            return new Vector2 { X = lhs.X - rhs.X, Y = lhs.Y - rhs.Y };
         }
 
 
@@ -41,7 +81,7 @@ namespace MathLibrary
         /// <returns>The result of the vector scaling</returns>
         public static Vector2 operator *(Vector2 lhs, float rhs)
         {
-            return new Vector2 { x = lhs.x * rhs, y = lhs.y * rhs };
+            return new Vector2 { X = lhs.X * rhs, Y = lhs.Y * rhs };
         }
 
         /// <summary>
@@ -52,7 +92,7 @@ namespace MathLibrary
         /// <returns>The result of the vector scaling</returns>
         public static Vector2 operator /(Vector2 lhs, float rhs)
         {
-            return new Vector2 { x = lhs.x / rhs, y = lhs.y / rhs };
+            return new Vector2 { X = lhs.X / rhs, Y = lhs.Y / rhs };
         }
 
         /// <summary>
@@ -63,12 +103,12 @@ namespace MathLibrary
         /// <returns>true if the x values of both vectors</returns>
         public static bool operator ==(Vector2 lhs, Vector2 rhs)
         {
-            return lhs.x == rhs.x && lhs.y == rhs.y;
+            return lhs.X == rhs.X && lhs.Y == rhs.Y;
         }
 
         public static bool operator !=(Vector2 lhs, Vector2 rhs)
         {
-            return lhs.x != rhs.x && lhs.y != rhs.y;
+            return lhs.X != rhs.X && lhs.Y != rhs.Y;
         }
 
 
